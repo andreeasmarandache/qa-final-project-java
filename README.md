@@ -14,6 +14,7 @@ To simulate running tests locally use the following Maven command:
 
 ```bash
 mvn test
+```
 
 ## How to build and run the Docker image
 
@@ -22,5 +23,5 @@ Use the following commands:
 ```bash
 docker build .
 docker run -d
-
+```
  
