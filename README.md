@@ -1,27 +1,55 @@
-# qa-final-project-java
+# QA Final Project - Java 🖊️
 
-[![CI Pipeline for QA Project](https://github.com/andreeasmarandache/qa-final-project-java/actions/workflows/ci.yml/badge.svg)](https://github.com/andreeasmarandache/qa-final-project-java/actions/workflows/ci.yml)
+A **Java project** demonstrating object-oriented programming, exception handling, and data validation through a simple user management system.  
 
-## About the project:
+This project is part of my portfolio and highlights my skills in **Java OOP**, **custom exceptions**, and **list management**.
 
-- has a complete QA Automation workflow using Java, Maven, GitHub Actions and Docker;
-- it simulates a real-world testing setup where automated tests are executed through a CI/CD pipeline and the resulting Docker image is built and pushed to Docker Hub;
-- includes the needed folder structure, configurations files, API test design in pseudocode and continuous integration and delivery automation.
+---
 
-## How to run tests locally
+## 🌟 Overview
 
-To simulate running tests locally use the following Maven command:
+In this project, I implemented a small user management system covering:
 
-```bash
-mvn test
-```
+- Creating **custom exception classes** for validation (`InvalidUserDataException`)  
+- Designing base and derived classes (`User` and `AdminUser`) with encapsulated fields  
+- Implementing a **repository class** to store valid users and enforce validation rules  
+- Testing all functionalities with a **runner class** (`TestUserRunner`)  
 
-## How to build and run the Docker image
+---
 
-Use the following commands:
+## 🧩 Project Details
 
-```bash
-docker build .
-docker run -d
-```
+### User and AdminUser Classes
+- **User**: has `username` (String) and `age` (int), with getters and `toString()` for display  
+- **AdminUser**: extends User, adds `permissionLevel` (String) and overrides `toString()`  
+
+### InvalidUserDataException
+- Custom exception extending `Exception`  
+- Thrown when invalid user data is added to the repository  
+
+### UserRepository
+- Stores valid users in a private `List<User>`  
+- Method `addUser(User user)` validates the user and throws `InvalidUserDataException` if any rule fails  
+- Method `getUsers()` returns the list of valid users  
+
+### TestUserRunner
+- Tests all implemented functionalities  
+- Adds users inside `try-catch` blocks to ensure the program continues even if one user is invalid  
+- Prints error messages for invalid users  
+- Prints all valid users at the end  
+
+---
+
+## 💡 Highlights
+
+- Demonstrates **OOP principles**: inheritance, encapsulation, polymorphism  
+- Implements **custom exception handling**  
+- Shows ability to **validate and manage data collections**  
+- Includes a simple **runner class** to test and verify all features  
+- CI build verified on GitHub  
+
+---
+
+This project is a concrete example from my portfolio, showing **how I structure Java programs, handle exceptions, and implement object-oriented designs for small systems**. 🎯
+
  
